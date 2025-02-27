@@ -1,0 +1,58 @@
+//code is here.
+// CPP program that just counts and tests limits of the string capacity.  Then shows results
+// I have not tested the CATCH  and TRY for error as not hit that error yet. . .
+
+
+//again from memory.   # has to be there for preoproccero
+//Created by:Rod Deluhery
+//Date Feb 26, 2025
+//Purpose:  Test c++ see how large the string can hold before it crashes.  
+
+//System libraries
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+string big,dave,dan;
+dave="It is time for all good men";
+dan="It is time for all trivial and weak men";
+cout<<dan+dave;
+//this makes a big string fast and I can't make it overflow, string can be HUGE IT SEEMS.  400 megabytes at least.
+try{
+for(int i=0;i<=10;i++)
+  {
+    dave=dan+dave+dave+dave+dave;
+    big=dave;
+    dave=big+dave;
+//    cout<<dave;
+    cout<<endl<<"Did the string, did it get bigger?  This is run number "<<i<<".  So the string size now, that fit into memory is: "<<endl;
+     
+     {
+     int count = 0;
+     for (char c : dave) {
+         count++;
+        // cout<<count;
+
+       }
+       cout<<count<<endl;
+       cout<<endl;
+     }
+  }
+  
+//cout<<dave;
+cout<<endl;
+}
+catch (...)
+{
+    cout<<"ok";
+}
+}
+
+
+
+
+
+
+
