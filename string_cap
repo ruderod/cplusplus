@@ -18,7 +18,8 @@ int main()
 string big,dave,dan;
 dave="It is time for all good men";
 dan="It is time for all trivial and weak men";
-cout<<dan+dave;
+//show strings.   If just doing memory and speed test,  remove. 
+//cout<<dan+dave;
 //this makes a big string fast and I can't make it overflow, string can be HUGE IT SEEMS.  400 megabytes at least.
 try{
 for(int i=0;i<=10;i++)
