@@ -1,0 +1,51 @@
+/* 
+Name: Rod O Deluhery
+Date: 03/16/2025
+Purpose: game project
+*/
+//System libraries
+
+#include <iostream>
+#include <chrono>
+#include <thread>
+#include <vector>
+int flip;
+int roll1;
+
+
+using namespace std;
+int main (int argv,char **argc){
+    //set this to how big you want the array to be
+    const int size = 12;
+
+  //  int super[],[];
+vector<int> numbers(size);
+
+srand(time(0)); // Seed for random number generation
+
+for (int i = 0; i < size; ++i) {
+    numbers[i] = rand() % 50 + 1; // Generate random number between 1 and 50
+}
+
+// Print the numbers to verify
+for (int i = 0; i < size; ++i) {
+    cout << numbers[i] << " ";
+}
+cout << endl;
+//print the numbers in reverse order
+
+flip= (size-1);
+//cout<<"flip is "<<flip<<endl;
+for (flip; flip > -1; --flip) {
+   // cout<<" ("<<i<<") ";
+    cout << numbers[flip] << " ";
+}
+
+
+
+}
+	
+
+
+
+
