@@ -1,38 +1,42 @@
 /* 
- * File:   main.cpp
- * Author: 
- * Created:
- * Purpose:  
- * 
- */
+Name: Rod O Deluhery
+Date: 03/16/2025
+Purpose: game project.  creates box of numbers with sum
+*/
+//System libraries
 
-//System Libraries
-#include <iostream>  //Input/Output Library
-#include <iomanip>   //Format Library
+#include <iostream>
+#include <chrono>
+#include <thread>
+#include <vector>
+int flip;
+int roll1;
+
+
 using namespace std;
+int main (int argv,char **argc){
+    const int size = 6;
+    int table[size][size];
 
-//User Libraries
+    // Fill the table with sums of row and column indices
+    for (int row = 0; row < size; ++row) {
+        
+        for (int col = 0; col < size; ++col) {
+            table[row][col] = (row + 1) + (col + 1);
+          //  cout<<"print out as it happens"<<table[row][col]<<endl;
+        }
+    }
 
-//Global Constants, no Global Variables are allowed
-//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
-const int COLS=6;
-
-//Function Prototypes
-void fillTbl(int [][COLS],int);
-void prntTbl(const int [][COLS],int);
-
-//Execution Begins Here!
-int main(int argc, char** argv) {
-    //Declare Variables
-    const int ROWS=6;
-    int tablSum[ROWS][COLS];
-    
-    //Initialize or input i.e. set variable values
-    fillTbl(tablSum,ROWS);
-    
-    //Display the outputs
-    prntTbl(tablSum,ROWS);
-
-    //Exit stage right or left!
-    return 0;
+    // Print the table
+    for (int row = 0; row < size; ++row) {
+        cout<<row+1<<"  ";
+        for (int col = 0; col < size; ++col) {
+            cout << table[row][col] << "\t";
+        }
+        cout << endl;
+    }
+	
 }
+
+
+
